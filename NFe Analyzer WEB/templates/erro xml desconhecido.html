@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>NF-e Analyzer WEB</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body{
+      background-color: gray;
+      font-family: verdana;
+      font-size: 100%;
+      color: #fff;
+    }
+
+    div{
+      text-align: center;
+      margin: auto;
+      width: 700px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: rgb(57, 58, 59);
+      margin-top: 100px;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+      
+  </style>
+</head>
+<body>
+    <div>
+      <p>Erro Detectado, Por Favor Verificar A Pasta Aprovada Pois Algum XML Nao Deveria Estar Nessa Pasta.</p>
+      <p>Caso Pressione O Botão Deletar O Programa Deletará O XML E Iniciará Uma Nova Verificação.</p>
+      <p>Caso Pressione O Botão Log Poderá Verificar Todo O Log.</p>
+      {%for n in deleta_xml %}
+        <p>XML Invalido Na Pasta Aprovadas: <span style="color: rgb(14, 138, 25);">{{n}}</span></p>
+      {%endfor%}
+      <a class="btn btn-danger" href="/deletar">Deletar</a>
+      <a class="btn btn-primary" href="/log">LOG</a>
+    </div>  
+</body>
+</html>

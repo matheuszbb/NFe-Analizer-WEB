@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>NF-e Analyzer WEB</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body{
+      background-color: gray;
+      font-family: verdana;
+      font-size: 100%;
+      color: #fff;
+    }
+
+    div{
+      text-align: center;
+      margin: auto;
+      width: 700px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: rgb(57, 58, 59);
+      margin-top: 100px;
+      text-align: center;
+    }
+      
+  </style>
+</head>
+<body>
+    <div>
+      <p>{{duplicado}}</p>
+      {%for n in lista_duplicados %}
+      <p>NF-e Encontrada No PDF Esta Duplicada:{{n}}</p>
+      {%endfor%}
+    </div>  
+</body>
+</html>
